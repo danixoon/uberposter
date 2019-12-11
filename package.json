@@ -1,0 +1,50 @@
+{
+  "name": "uberposter",
+  "version": "0.0.2",
+  "description": "command-line poster",
+  "main": "./build/index.js",
+  "repository": "https://danixoon@bitbucket.org/danixoon/uberposter.git",
+  "author": "D. <danixoon@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node ./build/index.js",
+    "app:dev": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "app:watch": "nodemon",
+    "app:build": "tsc",
+    "heroku-postbuild": "yarn && yarn app:build",
+    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "coverage": "jest --coverage"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "yarn app:dev",
+    "ext": "ts"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.12.14",
+    "concurrently": "^4.1.2",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/yargs": "^13.0.3",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.15",
+    "typescript": "^3.6.3",
+    "vk-io": "^4.0.0-rc.29",
+    "yargs": "^15.0.2"
+  }
+}
