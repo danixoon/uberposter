@@ -42,7 +42,7 @@
     "@types/lodash": "^4.14.149",
     "@types/yargs": "^13.0.3",
     "dotenv": "^8.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "typescript": "^3.6.3",
     "vk-io": "^4.0.0-rc.29",
     "yargs": "^15.0.2"
